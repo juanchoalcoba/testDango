@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
+      integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+  
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+    .background {
+      background-image: url("./Rectangle\ 2421.png");
+      
+      
+    }
+  </style>
+  <body>
+    <header class="flex flex-col max-w-[1440px] mx-auto">
+      <div
+        class="flex justify-center items-center min-w-[23.4375rem] h-[1.5rem] sm:w-full sm:max-w-[90rem] bg-[#7AA65A] font-normal text-[#FFFFFF]"
+      >
+        <p class="ml-6 text-[11px]">30% OFF ALL ORDERS UNTIL 4/27</p>
+      </div>
+      <nav class="flex justify-center items-center h-[70px]">
+        <!-- Menu Hamburguesa para móviles sin funcionalidad -->
+        <div class="sm:hidden absolute left-2 top-8">
+          <button class="text-[#111] focus:outline-none">
+            <!-- Ícono de tres líneas horizontales (hamburguesa) con líneas más finas y juntas -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-10 w-12 mt-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1"
+                d="M4 6h16M4 10h16M4 14h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- El resto del nav con el ul escondido en pantallas móviles -->
+        <ul
+          class="hidden sm:flex sm:justify-center sm:items-center mt-[13px] mr-[48px] text-[1rem] text-[#7AA65A]"
+        >
+          <li class="font-bold"><a href="">HOME</a></li>
+          <li class="ml-10"><a href="">ITEM 1</a></li>
+          <li class="ml-10"><a href="">ITEM 2</a></li>
+          <li class="ml-10"><a href="">ITEM 3</a></li>
+          <li class="ml-10"><a href="">ITEM 4</a></li>
+          <li class="ml-10"><a href="">ITEM 5</a></li>
+        </ul>
+
+        <!-- Vector y elipse -->
+        <div class="pointer">
+          <img
+            class="absolute right-[15px] sm:right-[54px] top-12"
+            src="./Vector (1).png"
+            alt=""
+          />
+          <img
+            class="absolute right-[11px] sm:right-[50px] top-15"
+            src="./Ellipse 280.png"
+            alt=""
+          />
+        </div>
+      </nav>
+    </header>
+
+    <section
+      class="background max-h-[881px] sm:max-w-[1440px]  sm:max-h-[653px] mt-2 flex flex-col mx-auto justify-center items-center flex-col-reverse sm:flex-row sm:justify-around sm:items-center"
+    >
+      <div class="sm:ml-5 sm:mt-24">
+        <h1 class="sm:max-w-[507px] tracking-wide sm:leading-[61px] mt-[42px] sm:mt-0 text-[2.3125rem] sm:text-[3.85rem] text-[#7AA65A]">
+          Lorem ipsum <br />
+          dolor sit amet
+        </h1>
+        <p
+          class="hidden sm:flex max-w-[482px] font-light ml-2 leading-[26px] text-[1rem] text-[#7AA65A] pb-4 pt-5"
+        >
+          Nunc porttitor tortor metus, nec sagittis lectus accumsan quis. Aenean
+          euismod mollis tempor.
+        </p>
+        <!--BOTONES-->
+        <div class="flex flex-col sm:flex-row mt-4 sm:mt-4">
+          <button
+            class="text-[13px] font-bold rounded-lg w-[226px] text-[#FFFFFF] h-[57px] bg-[#7AA65A]"
+          >
+            SHOP NOW
+          </button>
+          <button
+            class="w-[226px] h-[57px] mt-4 sm:mt-0 sm:ml-2 sm:border sm:border-1 sm:border-[#7AA65A] text-black sm:text-[#7AA65A] rounded-lg"
+          >
+            TAKE THE QUIZ
+          </button>
+        </div>
+
+        <!--BOTONES SWIPER-->
+        <div class="flex sm:justify-start justify-center items-center  space-x-2 mt-8 sm:mt-16">
+          <!-- Botón con flecha hacia la izquierda -->
+          <button
+            class="w-[41px] h-[31px] flex border border-1 border-[#7AA65A] items-center justify-center bg-gray-200 rounded-full"
+          >
+            <i class="fas fa-arrow-left text-[#7AA65A] text-lg"></i>
+          </button>
+
+          <!-- Botón con flecha hacia la derecha -->
+          <button
+            class="w-[41px] h-[31px] flex items-center bg-[#7AA65A] justify-center rounded-full"
+          >
+            <i class="fas fa-arrow-right text-lg text-[#FFFFFF]"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="max-w-[318px] max-h-[319px] sm:min-w-[319px] sm:max-w-[486px] sm:mb-40 mt-12  aspect-w-16 aspect-h-9">
+        <img src="./image 39.png" alt="" class="w-full h-full rounded-xl" />
+      </div>
+    </section>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+      integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    
+  </body>
+</html>
