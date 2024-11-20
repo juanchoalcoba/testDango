@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test Front-end Dango</title>
+    <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +14,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <style>
@@ -34,6 +37,10 @@
       width: 100%;
       height: 881px;
       z-index: -1000;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
     }
   </style>
   <body>
@@ -97,68 +104,231 @@
       class="sm:h-full sm:w-full flex flex-col mx-auto justify-center items-center flex-col-reverse sm:flex-row sm:justify-around sm:items-center"
     >
       <div class="background"></div>
-      <div class="sm:ml-5 sm:mt-24">
-        <h1
-          class="sm:max-w-[507px] tracking-wide sm:leading-[61px] mt-[42px] sm:mt-0 text-[2.3125rem] sm:text-[3.85rem] text-[#7AA65A]"
-        >
-          Lorem ipsum <br />
-          dolor sit amet
-        </h1>
-        <p
-          class="hidden sm:flex max-w-[482px] font-light ml-2 leading-[26px] text-[1rem] text-[#7AA65A] pb-4 pt-5"
-        >
-          Nunc porttitor tortor metus, nec sagittis lectus accumsan quis. Aenean
-          euismod mollis tempor.
-        </p>
-        <!--BOTONES-->
-        <div class="flex flex-col sm:flex-row mt-4 sm:mt-4">
-          <button
-            class="flex justify-around items-center  rounded-lg w-[226px] h-[57px] bg-[#7AA65A]"
-          >
-            <span class="text-[13px] font-bold mt-1 text-[#FFFFFF]">SHOP NOW</span>
-            <i class="fa-solid fa-angle-right mr-12 text-[19px] text-[#FFFFFF]"></i>
-          </button>
-          <button
-            class="sm:flex sm:justify-around sm:items-center w-[226px] h-[57px] mt-4 sm:mt-0 sm:ml-4 sm:border sm:border-1 sm:border-[#7AA65A] text-black  rounded-lg"
-          >
-          <span class="text-[13px] font-normal mt-1 ml-2 sm:text-[#7AA65A]">TAKE THE QUIZ</span>
-          <i class="fa-solid fa-angle-right mr-12 ml-8 text-[19px] sm:text-[#7AA65A] hidden sm:flex"></i>
 
-          </button>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide sm:h-full sm:w-full flex flex-col mx-auto justify-center items-center flex-col-reverse sm:flex-row sm:justify-around sm:items-center">
+            <div class="sm:ml-5 sm:mt-24">
+              <h1
+                class="sm:max-w-[507px] tracking-wide sm:leading-[61px] mt-[42px] sm:mt-0 text-[2.3125rem] sm:text-[3.85rem] text-[#7AA65A]"
+              >
+                Lorem ipsum <br />
+                dolor sit amet
+              </h1>
+              <p
+                class="hidden sm:flex max-w-[482px] font-light ml-2 leading-[26px] text-[1rem] text-[#7AA65A] pb-4 pt-5"
+              >
+                Nunc porttitor tortor metus, nec sagittis lectus accumsan quis.
+                Aenean euismod mollis tempor.
+              </p>
+              <!--BOTONES-->
+              <div class="flex flex-col sm:flex-row mt-4 sm:mt-4">
+                <button
+                  class="flex justify-around items-center rounded-lg w-[226px] h-[57px] bg-[#7AA65A]"
+                >
+                  <span class="text-[13px] font-bold mt-1 text-[#FFFFFF]"
+                    >SHOP NOW</span
+                  >
+                  <i
+                    class="fa-solid fa-angle-right mr-12 text-[19px] text-[#FFFFFF]"
+                  ></i>
+                </button>
+                <button
+                  class="sm:flex sm:justify-around sm:items-center w-[226px] h-[57px] mt-4 sm:mt-0 sm:ml-4 sm:border sm:border-1 sm:border-[#7AA65A] text-black rounded-lg"
+                >
+                  <span
+                    class="text-[13px] font-normal mt-1 ml-2 sm:text-[#7AA65A]"
+                    >TAKE THE QUIZ</span
+                  >
+                  <i
+                    class="fa-solid fa-angle-right mr-12 text-[19px] sm:text-[#7AA65A] hidden sm:flex"
+                  ></i>
+                </button>
+              </div>
+
+              <!--BOTONES SWIPER-->
+              <div
+                class="flex sm:justify-start justify-center items-center space-x-2 mt-4 sm:mt-16"
+              >
+                <!-- Botón con flecha hacia la izquierda -->
+                <button
+                  class="w-[41px] h-[31px] flex border border-1 border-[#7AA65A] items-center justify-center bg-gray-200 rounded-full prev"
+                >
+                  <i class="fas fa-arrow-left text-[#7AA65A] text-lg"></i>
+                </button>
+
+                <!-- Botón con flecha hacia la derecha -->
+                <button
+                  class="w-[41px] h-[31px] flex items-center bg-[#7AA65A] justify-center rounded-full next"
+                >
+                  <i class="fas fa-arrow-right text-lg text-[#FFFFFF]"></i>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="max-w-[318px] max-h-[319px] sm:min-w-[319px] sm:max-w-[486px] sm:mb-40 mt-12 aspect-w-16 aspect-h-9"
+            >
+              <img
+                src="../image 39.png"
+                alt=""
+                class="w-full h-full rounded-xl"
+              />
+            </div>
+          </div>
+          <div class="swiper-slide sm:h-full sm:w-full flex flex-col mx-auto justify-center items-center flex-col-reverse sm:flex-row sm:justify-around sm:items-center">
+            <div class="sm:ml-5 sm:mt-24">
+              <h1
+                class="sm:max-w-[507px] tracking-wide sm:leading-[61px] mt-[42px] sm:mt-0 text-[2.3125rem] sm:text-[3.85rem] text-[#7AA65A]"
+              >
+                Second title <br />
+                dolor sit amet
+              </h1>
+              <p
+                class="hidden sm:flex max-w-[482px] font-light ml-2 leading-[26px] text-[1rem] text-[#7AA65A] pb-4 pt-5"
+              >
+                Nunc porttitor tortor metus, nec sagittis lectus accumsan quis.
+                Aenean euismod mollis tempor.
+              </p>
+              <!--BOTONES-->
+              <div class="flex flex-col sm:flex-row mt-4 sm:mt-4">
+                <button
+                  class="flex justify-around items-center rounded-lg w-[226px] h-[57px] bg-[#7AA65A]"
+                >
+                  <span class="text-[13px] font-bold mt-1 text-[#FFFFFF]"
+                    >SHOP NOW</span
+                  >
+                  <i
+                    class="fa-solid fa-angle-right mr-12 text-[19px] text-[#FFFFFF]"
+                  ></i>
+                </button>
+                <button
+                  class="sm:flex sm:justify-around sm:items-center w-[226px] h-[57px] mt-4 sm:mt-0 sm:ml-4 sm:border sm:border-1 sm:border-[#7AA65A] text-black rounded-lg"
+                >
+                  <span
+                    class="text-[13px] font-normal mt-1 ml-2 sm:text-[#7AA65A]"
+                    >TAKE THE QUIZ</span
+                  >
+                  <i
+                    class="fa-solid fa-angle-right mr-12 text-[19px] sm:text-[#7AA65A] hidden sm:flex"
+                  ></i>
+                </button>
+              </div>
+
+              <!--BOTONES SWIPER-->
+              <div
+                class="flex sm:justify-start justify-center items-center space-x-2 mt-4 sm:mt-16"
+              >
+                <!-- Botón con flecha hacia la izquierda -->
+                <button
+                  class="w-[41px] h-[31px] flex border border-1 border-[#7AA65A] items-center justify-center bg-gray-200 rounded-full prev"
+                >
+                  <i class="fas fa-arrow-left text-[#7AA65A] text-lg"></i>
+                </button>
+
+                <!-- Botón con flecha hacia la derecha -->
+                <button
+                  class="w-[41px] h-[31px] flex items-center bg-[#7AA65A] justify-center rounded-full next"
+                >
+                  <i class="fas fa-arrow-right text-lg text-[#FFFFFF]"></i>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="max-w-[318px] max-h-[319px] sm:min-w-[319px] sm:max-w-[486px] sm:mb-40 mt-12 aspect-w-16 aspect-h-9"
+            >
+              <img
+                src="../image 39.png"
+                alt=""
+                class="w-full h-full rounded-xl"
+              />
+            </div>
+          </div>
+          <div class="swiper-slide sm:h-full sm:w-full flex flex-col mx-auto justify-center items-center flex-col-reverse sm:flex-row sm:justify-around sm:items-center">
+            <div class="sm:ml-5 sm:mt-24">
+              <h1
+                class="sm:max-w-[507px] tracking-wide sm:leading-[61px] mt-[42px] sm:mt-0 text-[2.3125rem] sm:text-[3.85rem] text-[#7AA65A]"
+              >
+                Another title <br />
+                dolor sit amet
+              </h1>
+              <p
+                class="hidden sm:flex max-w-[482px] font-light ml-2 leading-[26px] text-[1rem] text-[#7AA65A] pb-4 pt-5"
+              >
+                Nunc porttitor tortor metus, nec sagittis lectus accumsan quis.
+                Aenean euismod mollis tempor.
+              </p>
+              <!--BOTONES-->
+              <div class="flex flex-col sm:flex-row mt-4 sm:mt-4">
+                <button
+                  class="flex justify-around items-center rounded-lg w-[226px] h-[57px] bg-[#7AA65A]"
+                >
+                  <span class="text-[13px] font-bold mt-1 text-[#FFFFFF]"
+                    >SHOP NOW</span
+                  >
+                  <i
+                    class="fa-solid fa-angle-right mr-12 text-[19px] text-[#FFFFFF]"
+                  ></i>
+                </button>
+                <button
+                  class="sm:flex sm:justify-around sm:items-center w-[226px] h-[57px] mt-4 sm:mt-0 sm:ml-4 sm:border sm:border-1 sm:border-[#7AA65A] text-black rounded-lg"
+                >
+                  <span
+                    class="text-[13px] font-normal mt-1 ml-2 sm:text-[#7AA65A]"
+                    >TAKE THE QUIZ</span
+                  >
+                  <i
+                    class="fa-solid fa-angle-right mr-12 text-[19px] sm:text-[#7AA65A] hidden sm:flex"
+                  ></i>
+                </button>
+              </div>
+
+              <!--BOTONES SWIPER-->
+              <div
+                class="flex sm:justify-start justify-center items-center space-x-2 mt-4 sm:mt-16"
+              >
+                <!-- Botón con flecha hacia la izquierda -->
+                <button
+                  class="w-[41px] h-[31px] flex border border-1 border-[#7AA65A] items-center justify-center bg-gray-200 rounded-full prev"
+                >
+                  <i class="fas fa-arrow-left text-[#7AA65A] text-lg"></i>
+                </button>
+
+                <!-- Botón con flecha hacia la derecha -->
+                <button
+                  class="w-[41px] h-[31px] flex items-center bg-[#7AA65A] justify-center rounded-full next"
+                >
+                  <i class="fas fa-arrow-right text-lg text-[#FFFFFF]"></i>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="max-w-[318px] max-h-[319px] sm:min-w-[319px] sm:max-w-[486px] sm:mb-40 mt-12 aspect-w-16 aspect-h-9"
+            >
+              <img
+                src="../image 39.png"
+                alt=""
+                class="w-full h-full rounded-xl"
+              />
+            </div>
+          </div>
         </div>
-
-        <!--BOTONES SWIPER-->
-        <div
-          class="flex sm:justify-start justify-center items-center space-x-2 mt-4 sm:mt-16"
-        >
-          <!-- Botón con flecha hacia la izquierda -->
-          <button
-            class="w-[41px] h-[31px] flex border border-1 border-[#7AA65A] items-center justify-center bg-gray-200 rounded-full"
-          >
-            <i class="fas fa-arrow-left text-[#7AA65A] text-lg"></i>
-          </button>
-
-          <!-- Botón con flecha hacia la derecha -->
-          <button
-            class="w-[41px] h-[31px] flex items-center bg-[#7AA65A] justify-center rounded-full"
-          >
-            <i class="fas fa-arrow-right text-lg text-[#FFFFFF]"></i>
-          </button>
-        </div>
-      </div>
-
-      <div
-        class="max-w-[318px] max-h-[319px] sm:min-w-[319px] sm:max-w-[486px] sm:mb-40 mt-12 aspect-w-16 aspect-h-9"
-      >
-        <img src="../image 39.png" alt="" class="w-full h-full rounded-xl" />
       </div>
     </section>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
-      integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+     const swiper = new Swiper('.swiper', {
+    navigation: {
+      nextEl: '.next',
+      prevEl: '.prev',
+    },
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+  });
+    </script>
   </body>
 </html>
