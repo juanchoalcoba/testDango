@@ -34,8 +34,7 @@
       background-size: cover;
       top: 94px;
       left: 0;
-      width: 100%;
-      height: 881px;
+
       z-index: -1000;
     }
     .swiper-button-prev,
@@ -44,6 +43,7 @@
     }
   </style>
   <body>
+    <!--HERO-->
     <header class="flex flex-col w-[100vw] mx-auto">
       <div
         class="flex justify-center items-center min-w-[23.4375rem] h-[24px] sm:w-full bg-[#7AA65A] font-normal text-[#FFFFFF]"
@@ -85,7 +85,7 @@
         </ul>
 
         <!-- Vector y elipse -->
-        <button class="pointer">
+        <button id="cart-btn" class="pointer">
           <img
             class="absolute right-[15px] sm:right-[54px] top-[48px]"
             src="../Vector (1).png"
@@ -100,14 +100,18 @@
       </nav>
     </header>
 
-    <section
-      class="sm:h-full sm:w-full flex flex-col mx-auto justify-center items-center flex-col-reverse sm:flex-row sm:justify-around sm:items-center"
-    >
-      <div class="background"></div>
+    <!--HERO-->
+    <section class="">
+      <div class="background w-full h-[741px] sm:h-[641px]"></div>
 
-      <div class="swiper">
+      <div 
+      
+      id="swiper-hero"  class="swiper sm:h-full sm:w-full flex flex-col mx-auto justify-center items-center flex-col-reverse sm:flex-row sm:justify-around sm:items-center"
+      >
         <div class="swiper-wrapper">
-          <div class="swiper-slide sm:h-full sm:w-full flex flex-col mx-auto justify-center items-center flex-col-reverse sm:flex-row sm:justify-around sm:items-center">
+          <div
+            class="swiper-slide sm:h-full sm:w-full flex flex-col mx-auto justify-center items-center flex-col-reverse sm:flex-row sm:justify-around sm:items-center"
+          >
             <div class="sm:ml-5 sm:mt-24">
               <h1
                 class="sm:max-w-[507px] tracking-wide sm:leading-[61px] mt-[42px] sm:mt-0 text-[2.3125rem] sm:text-[3.85rem] text-[#7AA65A]"
@@ -172,11 +176,13 @@
               <img
                 src="../image 39.png"
                 alt=""
-                class="w-full h-full rounded-xl"
+                class="w-full h-full rounded-xl cover"
               />
             </div>
           </div>
-          <div class="swiper-slide sm:h-full sm:w-full flex flex-col mx-auto justify-center items-center flex-col-reverse sm:flex-row sm:justify-around sm:items-center">
+          <div
+            class="swiper-slide sm:h-full sm:w-full flex flex-col mx-auto justify-center items-center flex-col-reverse sm:flex-row sm:justify-around sm:items-center"
+          >
             <div class="sm:ml-5 sm:mt-24">
               <h1
                 class="sm:max-w-[507px] tracking-wide sm:leading-[61px] mt-[42px] sm:mt-0 text-[2.3125rem] sm:text-[3.85rem] text-[#7AA65A]"
@@ -241,11 +247,13 @@
               <img
                 src="../image 39.png"
                 alt=""
-                class="w-full h-full rounded-xl"
+                class="w-full h-full rounded-xl cover"
               />
             </div>
           </div>
-          <div class="swiper-slide sm:h-full sm:w-full flex flex-col mx-auto justify-center items-center flex-col-reverse sm:flex-row sm:justify-around sm:items-center">
+          <div
+            class="swiper-slide sm:h-full sm:w-full flex flex-col mx-auto justify-center items-center flex-col-reverse sm:flex-row sm:justify-around sm:items-center"
+          >
             <div class="sm:ml-5 sm:mt-24">
               <h1
                 class="sm:max-w-[507px] tracking-wide sm:leading-[61px] mt-[42px] sm:mt-0 text-[2.3125rem] sm:text-[3.85rem] text-[#7AA65A]"
@@ -318,17 +326,348 @@
       </div>
     </section>
 
+    <!--ESHOP-->
+
+    <h2
+      class="text-[29px] sm:text-[34px] mt-24 sm:mt-48 font-bold text-center text-[#7AA65A94]"
+    >
+      Featured Collection
+    </h2>
+
+    <div id="swiper-products" class="swiper w-[375px] sm:w-[951px]">
+      <div class="swiper-wrapper">
+        <div
+          class="swiper-slide grid grid-cols-2 sm:grid-cols-4 place-items-center gap-x-12 sm:gap-x-2"
+        >
+          <article
+            class="mt-16 w-[223px] sm:h-[324px] rounded-2xl shadow-lg flex flex-col justify-center items-center"
+          >
+            <div class="">
+              <img class="" src="1.png" alt="" />
+            </div>
+            <div
+              class="w-full mt-3 gap-y-1 flex flex-col sm:flex-row justify-around items-center"
+            >
+              <p class="price">$134.43</p>
+              <button
+                class="w-[98px] buy-now rounded-xl text-[16px] text-[#FFFFFF] bg-[#7AA65A]"
+              >
+                BUY NOW
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="mt-16 w-[223px] sm:h-[324px] rounded-2xl shadow-lg flex flex-col justify-center items-center"
+          >
+            <div class="">
+              <img class="" src="2.png" alt="" />
+            </div>
+            <div
+              class="w-full mt-3 gap-y-1 flex flex-col sm:flex-row justify-around items-center"
+            >
+              <p class="price">$179.43</p>
+              <button
+                class="w-[98px] buy-now rounded-xl text-[16px] text-[#FFFFFF] bg-[#7AA65A]"
+              >
+                BUY NOW
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="mt-16 w-[223px] sm:h-[324px] rounded-2xl shadow-lg flex flex-col justify-center items-center"
+          >
+            <div class="">
+              <img class="" src="3.png" alt="" />
+            </div>
+            <div
+              class="w-full mt-3 gap-y-1 flex flex-col sm:flex-row justify-around items-center"
+            >
+              <p class="price">$182.43</p>
+              <button
+                class="w-[98px] buy-now rounded-xl text-[16px] text-[#FFFFFF] bg-[#7AA65A]"
+              >
+                BUY NOW
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="mt-16 w-[223px] sm:h-[324px] rounded-2xl shadow-lg flex flex-col justify-center items-center"
+          >
+            <div class="">
+              <img class="" src="4.png" alt="" />
+            </div>
+            <div
+              class="w-full mt-3 gap-y-1 flex flex-col sm:flex-row justify-around items-center"
+            >
+              <p class="price">$164.43</p>
+              <button
+                class="w-[98px] buy-now rounded-xl text-[16px] text-[#FFFFFF] bg-[#7AA65A]"
+              >
+                BUY NOW
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="mt-16 w-[223px] sm:h-[324px] rounded-2xl shadow-lg flex flex-col justify-center items-center"
+          >
+            <div class="">
+              <img class="" src="1.png" alt="" />
+            </div>
+            <div
+              class="w-full mt-3 gap-y-1 flex flex-col sm:flex-row justify-around items-center"
+            >
+              <p class="price">$183.43</p>
+              <button
+                class="w-[98px] buy-now rounded-xl text-[16px] text-[#FFFFFF] bg-[#7AA65A]"
+              >
+                BUY NOW
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="mt-16 w-[223px] sm:h-[324px] rounded-2xl shadow-lg flex flex-col justify-center items-center"
+          >
+            <div class="">
+              <img class="" src="3.png" alt="" />
+            </div>
+            <div
+              class="w-full mt-3 gap-y-1 flex flex-col sm:flex-row justify-around items-center"
+            >
+              <p class="price">$199.43</p>
+              <button
+                class="w-[98px] buy-now rounded-xl text-[16px] text-[#FFFFFF] bg-[#7AA65A]"
+              >
+                BUY NOW
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="mt-16 w-[223px] sm:h-[324px] rounded-2xl shadow-lg flex flex-col justify-center items-center"
+          >
+            <div class="">
+              <img class="" src="4.png" alt="" />
+            </div>
+            <div
+              class="w-full mt-3 gap-y-1 flex flex-col sm:flex-row justify-around items-center"
+            >
+              <p class="price">$371.43</p>
+              <button
+                class="w-[98px] buy-now rounded-xl text-[16px] text-[#FFFFFF] bg-[#7AA65A]"
+              >
+                BUY NOW
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="mt-16 w-[223px] sm:h-[324px] rounded-2xl shadow-lg flex flex-col justify-center items-center"
+          >
+            <div class="">
+              <img class="" src="2.png" alt="" />
+            </div>
+            <div
+              class="w-full mt-3 gap-y-1 flex flex-col sm:flex-row justify-around items-center"
+            >
+              <p class="price">$154.43</p>
+              <button
+                class="w-[98px] buy-now rounded-xl text-[16px] text-[#FFFFFF] bg-[#7AA65A]"
+              >
+                BUY NOW
+              </button>
+            </div>
+          </article>
+        </div>
+        <div
+          class="swiper-slide grid grid-cols-2 sm:grid-cols-4 place-items-center gap-x-12 sm:gap-x-2"
+        >
+          <article
+            class="mt-16 w-[223px] sm:h-[324px] rounded-2xl shadow-lg flex flex-col justify-center items-center"
+          >
+            <div class="">
+              <img class="" src="1.png" alt="" />
+            </div>
+            <div
+              class="w-full mt-3 gap-y-1 flex flex-col sm:flex-row justify-around items-center"
+            >
+              <p class="price">$151.43</p>
+              <button
+                class="w-[98px] buy-now rounded-xl text-[16px] text-[#FFFFFF] bg-[#7AA65A]"
+              >
+                BUY NOW
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="mt-16 w-[223px] sm:h-[324px] rounded-2xl shadow-lg flex flex-col justify-center items-center"
+          >
+            <div class="">
+              <img class="" src="2.png" alt="" />
+            </div>
+            <div
+              class="w-full mt-3 gap-y-1 flex flex-col sm:flex-row justify-around items-center"
+            >
+              <p class="price">$321.43</p>
+              <button
+                class="w-[98px] buy-now rounded-xl text-[16px] text-[#FFFFFF] bg-[#7AA65A]"
+              >
+                BUY NOW
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="mt-16 w-[223px] sm:h-[324px] rounded-2xl shadow-lg flex flex-col justify-center items-center"
+          >
+            <div class="">
+              <img class="" src="3.png" alt="" />
+            </div>
+            <div
+              class="w-full mt-3 gap-y-1 flex flex-col sm:flex-row justify-around items-center"
+            >
+              <p class="price">$123.43</p>
+              <button
+                class="w-[98px] buy-now rounded-xl text-[16px] text-[#FFFFFF] bg-[#7AA65A]"
+              >
+                BUY NOW
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="mt-16 w-[223px] sm:h-[324px] rounded-2xl shadow-lg flex flex-col justify-center items-center"
+          >
+            <div class="">
+              <img class="" src="4.png" alt="" />
+            </div>
+            <div
+              class="w-full mt-3 gap-y-1 flex flex-col sm:flex-row justify-around items-center"
+            >
+              <p class="price">$412.43</p>
+              <button
+                class="w-[98px] buy-now rounded-xl text-[16px] text-[#FFFFFF] bg-[#7AA65A]"
+              >
+                BUY NOW
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="mt-16 w-[223px] sm:h-[324px] rounded-2xl shadow-lg flex flex-col justify-center items-center"
+          >
+            <div class="">
+              <img class="" src="1.png" alt="" />
+            </div>
+            <div
+              class="w-full mt-3 gap-y-1 flex flex-col sm:flex-row justify-around items-center"
+            >
+              <p class="price">$326.43</p>
+              <button
+                class="w-[98px] buy-now rounded-xl text-[16px] text-[#FFFFFF] bg-[#7AA65A]"
+              >
+                BUY NOW
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="mt-16 w-[223px] sm:h-[324px] rounded-2xl shadow-lg flex flex-col justify-center items-center"
+          >
+            <div class="">
+              <img class="" src="3.png" alt="" />
+            </div>
+            <div
+              class="w-full mt-3 gap-y-1 flex flex-col sm:flex-row justify-around items-center"
+            >
+              <p class="price">$149.43</p>
+              <button
+                class="w-[98px] buy-now rounded-xl text-[16px] text-[#FFFFFF] bg-[#7AA65A]"
+              >
+                BUY NOW
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="mt-16 w-[223px] sm:h-[324px] rounded-2xl shadow-lg flex flex-col justify-center items-center"
+          >
+            <div class="">
+              <img class="" src="4.png" alt="" />
+            </div>
+            <div
+              class="w-full mt-3 gap-y-1 flex flex-col sm:flex-row justify-around items-center"
+            >
+              <p class="price">$214.43</p>
+              <button
+                class="w-[98px] buy-now rounded-xl text-[16px] text-[#FFFFFF] bg-[#7AA65A]"
+              >
+                BUY NOW
+              </button>
+            </div>
+          </article>
+
+          
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="flex  justify-center items-center space-x-2 mt-4 "
+    >
+      <!-- Botón con flecha hacia la izquierda -->
+      <button
+        class="w-[41px] h-[31px] flex border border-1 border-[#7AA65A] items-center justify-center bg-gray-200 rounded-full anterior"
+      >
+        <i class="fas fa-arrow-left text-[#7AA65A] text-lg"></i>
+      </button>
+
+      <!-- Botón con flecha hacia la derecha -->
+      <button
+        class="w-[41px] h-[31px] flex items-center bg-[#7AA65A] justify-center rounded-full proximo"
+      >
+        <i class="fas fa-arrow-right text-lg text-[#FFFFFF]"></i>
+      </button>
+    </div>
+
+
+
+
+    <div id="cart-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
+      <div class="bg-white p-6 rounded-lg w-[300px]">
+        <h2 class="text-lg font-bold mb-4">Shopping Cart</h2>
+        <ul id="cart-items" class="space-y-2"></ul>
+        <p class="mt-4 font-semibold">Total: $<span id="cart-total">0.00</span></p>
+        <button id="close-modal" class="mt-6 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Close</button>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-     const swiper = new Swiper('.swiper', {
-    navigation: {
-      nextEl: '.next',
-      prevEl: '.prev',
-    },
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 10,
-  });
+      const swiper = new Swiper("#swiper-hero", {
+        navigation: {
+          nextEl: ".next",
+          prevEl: ".prev",
+        },
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+      });
+      const swiperHero = new Swiper("#swiper-products", {
+        navigation: {
+          nextEl: ".proximo",
+          prevEl: ".anterior",
+        },
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+      });
     </script>
+    <script src="script.js"></script>
   </body>
 </html>
